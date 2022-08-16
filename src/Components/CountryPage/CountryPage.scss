@@ -1,0 +1,43 @@
+@import '../../variables/variables.scss';
+
+.country {
+  margin: 80px auto 0;
+  display: flex;
+  flex-direction: column;
+  
+  .country__info-wrapper {
+    margin: 3em;
+    display: flex;
+
+    .country__image { 
+      width: 520px;
+      height: 340px;
+      object-fit: fill;
+    }
+
+    .country__text-wrapper {
+      margin: 20px 80px 0;
+
+      .country__title {
+        color: var(--text);
+        @include title;
+      }
+    }
+  }
+
+  .country__button-back {
+    margin: 4em 3.5em 0;
+    padding: 1em;
+    width: 140px;
+    border: none;
+    color: var(--text);
+    box-shadow: 0px 0px 6px var(--shadow);
+    background-color: var(--element-bg);
+    @include outline;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+}
