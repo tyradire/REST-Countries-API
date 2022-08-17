@@ -62,7 +62,7 @@ const CountryPage = () => {
             <ul className='border-countries__list'>
               { borderCountries ?
                 newBorders.map((elem, index) => {
-                  return <Link style={{ textDecoration: 'none' }} to={`../${elem.alpha3Code}`}  key={index}><li className='border-countries__item'>{elem.name}</li></Link>
+                  return <Link style={{ textDecoration: 'none' }} to={`../rest-countries-api/${elem.alpha3Code}`}  key={index}><li className='border-countries__item'>{elem.name}</li></Link>
                 })
                 : <li className='border-countries__item'>Not Found</li>
               }
