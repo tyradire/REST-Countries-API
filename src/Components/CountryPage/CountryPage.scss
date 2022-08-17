@@ -1,6 +1,7 @@
 @import '../../variables/variables.scss';
 
 .country {
+  max-width: 1440px;
   margin: 80px auto 0;
   display: flex;
   flex-direction: column;
@@ -9,19 +10,85 @@
     margin: 3em;
     display: flex;
 
+    .country__spinner {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      margin: 50px auto 0;
+
+      &:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 10px solid var(--text);
+        border-color: var(--text) transparent var(--text) transparent;
+        animation: spin .4s ease-in-out infinite;
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          } to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
     .country__image { 
       width: 520px;
       height: 340px;
       object-fit: fill;
     }
 
-    .country__text-wrapper {
-      margin: 20px 80px 0;
+    .country__main-wrapper {
+      margin: 0 100px 0;
 
       .country__title {
+        margin: 0;
         color: var(--text);
         @include title;
       }
+      .country__text {
+        margin: .1em 0;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        color: var(--text);
+      }
+      .country__text-wrapper {
+        height: 140px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 1.5em 0;
+      }
+      .country__border-countries {
+        display: flex;
+        align-items: center;
+
+        .border-countries__list {
+          width: 400px;
+          margin-left: 20px;
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+
+          .border-countries__item {
+            padding: .5em;
+            margin: .25em;
+            color: var(--text);
+            background-color: var(--element-bg);
+            @include outline;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      
     }
   }
 

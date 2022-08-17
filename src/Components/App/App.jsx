@@ -25,7 +25,7 @@ function App() {
       <Header />
     <Routes>
       <Route path='/' element={<MainPage countries={countries} filtredByRegion={filtredByRegion} setFiltredByRegion={setFiltredByRegion} step={step} setStep={setStep} />} />
-      <Route path='/:code' element={<CountryPage />} />
+      <Route path='/:code' element={<CountryPage filtredByRegion={filtredByRegion} />} />
     </Routes>
     </div>
   );
