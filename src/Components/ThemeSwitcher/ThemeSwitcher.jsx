@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from '../../hooks/useTheme.js';
+import { useTheme } from '../../hooks/use-theme';
 import './ThemeSwitcher.scss';
 import moon from '../../assets/moon.svg';
 import sun from '../../assets/sun.svg';
