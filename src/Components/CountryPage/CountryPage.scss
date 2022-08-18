@@ -7,8 +7,15 @@
   flex-direction: column;
   
   .country__info-wrapper {
+    max-width: 1440px;
     margin: 3em;
     display: flex;
+
+    @media screen and (max-width: $laptop) {
+      max-width: 768px;
+      margin: 40px 0 0;
+      flex-direction: column;
+    }
 
     .country__spinner {
       display: inline-block;
@@ -39,15 +46,33 @@
       width: 520px;
       height: 340px;
       object-fit: fill;
+
+      @media screen and (max-width: $laptop) {
+        width: 440px;
+        height: 280px;
+        margin: 0 30px;
+      }
+      @media screen and (max-width: $tablet) {
+        width: 320px;
+        height: 220px;
+      }
     }
 
     .country__main-wrapper {
       margin: 0 100px 0;
 
+      @media screen and (max-width: $laptop) {
+        margin: 40px 30px;
+      }
+
       .country__title {
         margin: 0;
         color: var(--text);
         @include title;
+
+        @media screen and (max-width: $laptop) {
+          margin: 0 0 10px;
+        }
       }
       .country__text {
         margin: .1em 0;
@@ -55,6 +80,18 @@
         line-height: 24px;
         font-weight: 300;
         color: var(--text);
+
+        @media screen and (max-width: $laptop) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .country__text_border {
+        @media screen and (max-width: $laptop) {
+          margin: .5em;
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
       .country__text-wrapper {
         height: 140px;
@@ -63,10 +100,24 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: 1.5em 0;
+
+        @media screen and (max-width: $laptop) {
+          width: 400px;
+          height: 200px;
+          margin: 0;
+        }
+        @media screen and (max-width: $tablet) {
+          width: 320px;
+        }
       }
       .country__border-countries {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $laptop) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         .border-countries__list {
           width: 400px;
@@ -75,12 +126,27 @@
           display: flex;
           flex-wrap: wrap;
 
+          @media screen and (max-width: $laptop) {
+            width: 340px;
+            margin-left: 0;
+          }
+
           .border-countries__item {
             padding: .5em;
             margin: .25em;
             color: var(--text);
             background-color: var(--element-bg);
             @include outline;
+
+            @media screen and (max-width: $laptop) {
+              min-width: 100px;
+              display: flex;
+              justify-content: center;
+              font-size: 14px;
+              line-height: 14px;
+              padding: .5em;
+              margin: .25em;
+            }
 
             &:hover {
               cursor: pointer;
@@ -101,6 +167,11 @@
     box-shadow: 0px 0px 6px var(--shadow);
     background-color: var(--element-bg);
     @include outline;
+
+    @media screen and (max-width: $laptop) {
+      max-width: 768px;
+      margin: 40px 30px 0;
+    }
 
     &:hover {
       cursor: pointer;

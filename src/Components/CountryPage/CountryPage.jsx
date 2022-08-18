@@ -58,7 +58,7 @@ const CountryPage = () => {
             <p className='country__text'>Languages: {langString}</p>
           </div>
           <div className='country__border-countries'>{}
-            <p className='country__text'>Border Countries:</p>
+            <p className='country__text country__text_border'>Border Countries:</p>
             <ul className='border-countries__list'>
               { borderCountries ?
                 newBorders.map((elem, index) => {
