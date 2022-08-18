@@ -22,6 +22,15 @@
       margin: 0;
       padding: 1em 2em;
       @include title;
+
+      @media screen and (max-width: $tablet) {
+        padding: 1.5em 2em;
+        font-size: 1em;
+      }
+      @media screen and (max-width: $mobile) {
+        padding: 2.75em 2em;
+        font-size: 0.7em;
+      }
     }
   }
 }

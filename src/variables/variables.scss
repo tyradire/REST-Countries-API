@@ -1,3 +1,8 @@
+$desktop: 1440px;
+$laptop: 1280px;
+$tablet: 768px;
+$mobile: 500px;
+
 [data-theme='light'] {
   --background: hsl(0, 0%, 98%);
   --element-bg: hsl(0, 0%, 100%);
@@ -17,7 +22,7 @@
 @mixin title {
   font: {
     family: 'Nunito Sans', sans-serif;
-    size: 20px;
+    size: 1.3em;
     weight: 800;
   }
   text-decoration: none;
@@ -27,7 +32,7 @@
 @mixin list-item {
   font: {
     family: 'Nunito Sans', sans-serif;
-    size: 18px;
+    size: 1.2em;
     weight: 400;
   }
   color: var(--text);
